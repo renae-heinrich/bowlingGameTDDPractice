@@ -20,7 +20,7 @@ public class Game {
             }
             else if(isSpare(frameIndex))//if in one frame, player throws a spare
                 //add 10 to players score and the value of the third index, the value of the first index of the new frame
-                 {score += 10 + rolls[frameIndex + 2];
+                 {score += 10 + spareBonus(frameIndex);
                  frameIndex += 2;
                  } else {
                 score += rolls[frameIndex] + rolls[frameIndex + 1];
@@ -36,6 +36,10 @@ public class Game {
             return rolls[frameIndex] + rolls[frameIndex + 1] == 10;
         }
 
+        private int spareBonus(int frameIndex){
+            return rolls[frameIndex + 2];
+        }
+
         private boolean isStrike(int frameIndex){
             return rolls[frameIndex] == 10;
         }
@@ -43,5 +47,7 @@ public class Game {
         private int strikeBonus(int frameIndex){
             return rolls[frameIndex+1] + rolls[frameIndex+2];
         }
+
+
 
 }
