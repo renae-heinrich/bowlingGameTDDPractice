@@ -14,7 +14,7 @@ public class Game {
         int frameIndex = 0;
         for (int frame = 0; frame < 10; frame++ ) {
             if(isSpare(frameIndex))//if in one frame, player throws a spare
-                //add 10 to players turn and the value of the third index, the value of the first index of the new frame
+                //add 10 to players score and the value of the third index, the value of the first index of the new frame
                  {score += 10 + rolls[frameIndex + 2];
                  frameIndex += 2;
                  } else {

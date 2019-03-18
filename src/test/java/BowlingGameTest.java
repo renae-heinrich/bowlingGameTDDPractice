@@ -27,11 +27,15 @@ public class BowlingGameTest extends TestCase {
         }
 
     public void testOneSpare(){
-        g.roll(5);
-        g.roll(5); // spare because knocked over 10 pins in 2 turns
+        rollSpare();
         g.roll(3);
         rollMany(17,0);
         assertEquals(16, g.score());
+     }
+
+     private void rollSpare(){
+        g.roll(5);
+        g.roll(5);
      }
 
 
