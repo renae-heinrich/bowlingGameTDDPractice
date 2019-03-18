@@ -41,6 +41,12 @@ public class BowlingGameTest extends TestCase {
         assertEquals(24, g.score());
      }
 
+     public void testPerfectGame() throws Exception{
+        //12 rolls, 10 pins knocked over every time
+        rollMany(12, 10);
+        assertEquals(300, g.score());
+     }
+
      private void rollSpare(){
         g.roll(5);
         g.roll(5);
